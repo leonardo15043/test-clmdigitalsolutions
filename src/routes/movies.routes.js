@@ -48,7 +48,7 @@ router.get(`${process.env.BASE_URL}/movies/`,  async (ctx, next)=>{
 
 // Buscar y reemplazar:
 
-router.post(`${process.env.BASE_URL}/prueba`, bodyParser , async (ctx) =>{
+router.post(`${process.env.BASE_URL}/movies/replace`, bodyParser , async (ctx) =>{
     const { movie,find,replace } = ctx.request.body;
     const data = await Movie.findOne({'Title': movie });
     const { Plot } = data;
